@@ -19,6 +19,7 @@ try {
 	}
 } catch (Exception e) { // 예외가 발생했을 때
 	out.println("잘못된 값을 입력하셨습니다. (2부터 9까지 입력)"); // 출력
+	return; // val을 비워도 디폴트 단은 출력되길래 return으로 종료
 }
 if(dan >= 2 && dan <= 9 ) { // 파라미터에 2~9 아닌 값을 넣어도 출력은 되길래 조건문 걸었음
 	out.println("<h2>" + dan + "단" + "</h2>");
