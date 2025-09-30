@@ -8,15 +8,45 @@
 </head>
 <body>
 	<form method=GET>
-		<input type="radio" name="sel" checked="checked"/>Type1 : 세로<br/>
-		<input type="radio" name="sel" />Type2 : 가로<br/>
-		<input type="radio" name="sel" />Type3 : 하나만 출력<br/>
-		<input type="radio" name="sel"/>Type4 : 여러개씩 묶어서 출력<br/>
-		<input type="text" name="val" />단수/열수<br/>
+		<input type="radio" name="sel" value="type1" checked="checked"/>Type1 : 세로<br/>
+		<input type="radio" name="sel" value="type2"/>Type2 : 가로<br/>
+		<input type="radio" name="sel" value="type3"/>Type3 : 하나만 출력<br/>
+		<input type="radio" name="sel" value="type4"/>Type4 : 여러개씩 묶어서 출력<br/>
+		<input type="text" name="val" value="2" />단수/열수<br/>
 		<input type="submit" value="선택"/>
 	</form>
 	<%
+	// 중복되는 코드 정리
+	String sel = request.getParameter("sel");
+	String val = request.getParameter("val");
+	System.out.println("sel : "+ sel);
+	if(sel != null) {
+		String url = "";
+		if(sel.equals("type1"))
+			url = "gugudan01.jsp";
+		else if(sel.equals("type2"))
+			url = "gugudan02.jsp";
+		else if(sel.equals("type3"))
+			url = "gugudan03.jsp?val=" + val;
+		else
+			url = "gugudan04.jsp?val=" + val;
+		request.getRequestDispatcher(url).forward(request, response);
+	}
 	
+	//String sel = request.getParameter("sel");
+	//String val = request.getParameter("val");
+	//System.out.println("sel : " + sel);
+	
+	//if(sel != null) {
+		//if(sel.equals("type1"))
+			//request.getRequestDispatcher("gugudan01.jsp").forward(request, response);
+		//else if(sel.equals("type2"))
+			//request.getRequestDispatcher("gugudan02.jsp").forward(request, response);
+		//else if(sel.equals("type3"))
+			//request.getRequestDispatcher("gugudan03.jsp?val=" + val).forward(request, response);
+		//else
+			//request.getRequestDispatcher("gugudan04.jsp?val=" + val).forward(request, response);
+	//}
 	%>
 </body>
 </html>
