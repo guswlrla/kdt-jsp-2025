@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method=GET>
-	
-	<form/>
+
 </body>
 </html>

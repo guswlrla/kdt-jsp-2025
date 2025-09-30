@@ -12,7 +12,7 @@ request.setAttribute("requestPerson", new Person("안중근", 31));
 <title>request 영역</title>
 </head>
 <body>
-	<h2>request 영역의 속성값</h2>
+	<h2>request 영역의 속성값 삭제하기</h2>
 	<%
 		request.removeAttribute("requestString");
 		request.removeAttribute("requestInteger"); // 에러 없음
