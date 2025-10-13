@@ -18,7 +18,7 @@ int count1000 = 0;
 
 if(price != null) {
 	int intPrice = Integer.parseInt(price);
-	int discount = intPrice % 100; // 다시해
+	int discount = intPrice % 1000; 
 	discountPrice = intPrice - discount;
 	
 	count50000 = discountPrice / 50000; // 오만원권
