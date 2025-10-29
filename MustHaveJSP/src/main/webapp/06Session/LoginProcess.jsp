@@ -25,13 +25,3 @@ else {
 	request.getRequestDispatcher("LoginForm.jsp").forward(request, response);
 }
 %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Session</title>
-</head>
-<body>
-
-</body>
-</html>
