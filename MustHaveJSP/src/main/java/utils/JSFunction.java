@@ -1,4 +1,4 @@
-package common;
+package utils;
 
 import jakarta.servlet.jsp.JspWriter; // 필요한 클래스 임포트
 
